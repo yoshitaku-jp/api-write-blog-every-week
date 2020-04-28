@@ -17,26 +17,22 @@ def get_blog_data(author):
         "url" : "",
         "user_name" : "",
         "icon" : "",
-        "entry" : {
-            "title" : "",
-            "link" : "",
-            "published" : ""
-        },
-        "last_published" : ""
+        "entry_title" : "",
+        "entry_link" : "",
+        "entry_published" : ""
     }
 
     blog["name"] = d['feed']['title']
     blog["url"] = d['feed']['title']
     blog["user_name"] = author[1]
     blog["icon"] = ""
-    blog["last_published"] = d['items'][0]['published']
-    blog["entry"]["title"] = d['items'][0]['title']
-    blog["entry"]["link"] = d['items'][0]['link']
-    blog["entry"]["published"] = d['items'][0]['published']
+    blog["entry_title"] = d['items'][0]['title']
+    blog["entry_link"] = d['items'][0]['link']
+    blog["entry_published"] = d['items'][0]['published']
     return blog
 
 def sort_blogs(blogs):
-    return sorted(blogs,key=lambda x: x['last_published'])
+    return sorted(blogs,key=lambda x: x['entry_published'])
 
 if __name__ == "__main__":
 
