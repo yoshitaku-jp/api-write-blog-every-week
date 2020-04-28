@@ -1,6 +1,7 @@
 # api-write-blog-every-week
 
 Write-Blog-Every-Weekのサイト用に、メンバーのブログをクロールし、NetlifyにJSONファイルを出力し簡易的にAPIサーバとするプログラムです。
+
 This program crawls a member's blog for Write-Blog-Every-Week site and outputs a JSON file to Netlify as a simple API server.
 
 # 使い方 / How To Use
@@ -13,7 +14,7 @@ Run `python src/feeds/cli.py` with the information in the CSV file. The program 
 
 # 参考情報 / Reference information
 フロントエンドのプログラムはこちらです。
-https://github.com/yoshitaku-jp/write-blog-every-week
 
 The front-end program is here.
+
 https://github.com/yoshitaku-jp/write-blog-every-week
