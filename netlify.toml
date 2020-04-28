@@ -1,0 +1,3 @@
+[build]
+  publish = "public/"
+  command = "python src/feeds/cli.py > public/blogs.json"
