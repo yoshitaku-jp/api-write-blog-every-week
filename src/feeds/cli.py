@@ -17,11 +17,11 @@ def get_blog_data(author):
         "url" : "",
         "user_name" : "",
         "icon" : "",
-        "entry" : [{
+        "entry" : {
             "title" : "",
             "link" : "",
             "published" : ""
-        }],
+        },
         "last_published" : ""
     }
 
@@ -30,9 +30,9 @@ def get_blog_data(author):
     blog["user_name"] = author[1]
     blog["icon"] = ""
     blog["last_published"] = d['items'][0]['published']
-    blog["entry"][0]["title"] = d['items'][0]['title']
-    blog["entry"][0]["link"] = d['items'][0]['link']
-    blog["entry"][0]["published"] = d['items'][0]['published']
+    blog["entry"]["title"] = d['items'][0]['title']
+    blog["entry"]["link"] = d['items'][0]['link']
+    blog["entry"]["published"] = d['items'][0]['published']
     return blog
 
 def sort_blogs(blogs):
