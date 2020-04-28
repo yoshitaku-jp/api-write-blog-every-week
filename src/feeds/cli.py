@@ -1,4 +1,5 @@
 import csv
+import json
 import feedparser
 
 def get_authors_data(file):
@@ -42,5 +43,5 @@ if __name__ == "__main__":
     for author in authors:
         blogs.append(get_blog_data(author))
 
-    print(sort_blogs(blogs))
+    print(json.dumps(sort_blogs(blogs)))
     
