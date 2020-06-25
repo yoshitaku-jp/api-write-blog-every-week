@@ -24,7 +24,7 @@ def get_blog_data(author):
     }
 
     blog["name"] = d['feed']['title']
-    blog["url"] = d['feed']['title']
+    blog["url"] = d['feed']['link']
     blog["user_name"] = author[1]
     blog["icon"] = author[2]
     blog["entry_title"] = d['items'][0]['title']
